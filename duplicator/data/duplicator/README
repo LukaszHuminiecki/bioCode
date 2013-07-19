@@ -1,0 +1,8 @@
+These files are R environments.
+Use load() to load them into your R session!
+You ls() to view contents.
+
+You may use attach() syntax to load the namespace or access data members of the environment using the "$"
+reference operator.
+
+There is no warranty for this software.

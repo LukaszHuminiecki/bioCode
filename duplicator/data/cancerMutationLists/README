@@ -1,0 +1,26 @@
+data/cancerMutationLists contains several example cancer mutation lists:
+
+	Broad2000_1871genes.txt
+	COSMIC2perc_samples_350genes.txt
+	TCGAcopyNumber_RAE_943genes.txt
+	TCGAdifferentialInSubtypes_840genes.txt
+	TCGAtumourVsNormalDifferential_488genes.txt
+	TheSangerList_379genes.txt
+	tcgaGeneRankerBroad_3orMore_705genes.txt
+	tcgaGeneRankerStrict_4orMore_312genes.txt
+
+File cancerMutationLists/env_cancerMutationLists contains  cancer mutation lists saved in an environment. 
+To use:
+
+load("env_cancerMutationLists")
+attach(env_cancerMutationLists)
+ls(env_cancerMutationLists) 
+
+--->>>
+Relevenat citations and links:
+COSMIC: mining complete cancer genomes in the Catalogue of Somatic Mutations in Cancer. Simon A. Forbes, Nidhi Bindal, Sally Bamford, Charlotte Cole, Chai Yin Kok, David Beare, Mingming Jia, Rebecca Shepherd, Kenric Leung, Andrew Menzies, Jon W. Teague, Peter J. Campbell, Michael R. Stratton and P. Andrew Futreal*. Nucl. Acids Res. (2011) 39 (suppl 1): D945-D950.
+
+TCGA http://cancergenome.nih.gov/
+https://tcga-data.nci.nih.gov/docs/publications/
+https://tcga-data.nci.nih.gov/docs
+

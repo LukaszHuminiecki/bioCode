@@ -1,0 +1,45 @@
+This is test release alpha 0.1 for Duplicator (GPLv3): a set of R tools, utilities and data for experimental analysis of cancer mutation data in the context of evolutionary systems biology.
+
+We put data on mutated cancer genes in the context of evolutionary history of genes, in particular gene duplication events. These tools and data are also developed for basic research in evolutionary systems biology.
+
+This project is supported by BILS http://www.bils.se/.
+
+The long-term plan for this project is to prototype in R and then reimplement the toolkit in C++.
+
+--->>>
+
+This software is distributed under GNU GENERAL PUBLIC LICENSE v3. (GPLv3)
+http://www.gnu.org/licenses/gpl.html
+
+--->>>
+
+Some information on files:
+funData.R	utilities for loading and preparation of data (cancerMutationLists, env_duplicator_vectors,
+           	env_duplicator_base, signaling networks (e.g. hcsm));
+funBasic.R      R functions for analysis of mutations and the network in context of gene duplications;
+                first load the datasets and then play with these functions to analyze network features.
+env_duplicator_make.R	an example analysis flow: load the data, load the functions, perform statistical tests
+                        for network features such as degree, dyadicity, betweenness-centrality.
+            
+Note:            
+- duplicationWave (all genes descendant from duplication wave of given age) 
+- duplicationWave2 (all genes descendant from duplication wave of given age in pairs of duplicates!) 
+- orderedTaxa, orderedTaxaColors, orderedTaxaShape, orderedTaxaList 
+  (taxa of duplication arranged in chronological order plus attributes for plotting graphs with nodes marked by 
+  color and shape as coming from a gene duplication event from a given taxon)
+
+Other methods which might be of interest:
+(a) annotateAttribute functions annotate network nodes
+annotateAttributeDuplication	takes network and duplicationWave as argument and returns annotated network
+annotateAttributeMutation    takes network and CancerMutationGeneList as argument and returns annotated network
+annotateAttributeDrugTarget    takes network and CancerDrugTargets as argument and returns annotated network
+(b) annotateEdge functions annotate network edges
+annotateEdgeCoexpressionPC	annotate edges with co-expression values for the nodes which they link; this puts
+				network nodes in context of gene expression information; these functions will be developed
+				using generic programming principles so can work with any expression dataset and any type of
+                                expresion correlation
+annotateEdgeDistance	annotate with ageDistance, distance between last duplication events between connected nodes
+                        takes duplicationWave and network as arguments
+			
+pacGraph.R	just a helper file to load required packages: 
+                use with source("pacGraph.R"); install first from CRAN and BioC

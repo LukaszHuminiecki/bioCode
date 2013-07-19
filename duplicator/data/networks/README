@@ -1,0 +1,30 @@
+We have included several publically available network datasets in our package, to get you started.
+Note, that we have not generated any of these datasets, and appropriate references should be cited
+if the datasets are used for publication.
+
+
+1. Network files contributed to Cytoscape.
+The node annotation files contain the HUGO IDs that correspond to the EntrezGeneIDs.
+
+Yeast two-hybrid (Y2H) interaction mating Protein-protein interaction map. 
+Using topological and GO criteria, a scoring system was developed to define 
+911 high-confidence interactions among 401 proteins. 
+http://cytoscape.org/datasets/stelzl.sif. stelzl.sif contains interaction file,
+stelzl.na contains node attributes.
+Network contains 1,686 nodes and 3,155. 
+PMID: 16169070. 
+
+RUAL.sif and RUAL.na. PMID: 16189514. 
+
+See also:
+http://wiki.cytoscape.org/Data_Sets/
+
+These networks were ported to graphNEL format using BioNet package, function loadNetwork.sif.
+
+2. HCSM - human cancer signalling map by Cui et al.
+
+
+hcsm, rual_et_al, and stelzl_et_al are R environment files, which can loaded directly into R session:
+
+
+
